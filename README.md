@@ -1,6 +1,6 @@
-# AI Guidebook
+# AI Guidebook V2
 
-AI Guidebook is a Next.js app for student AI usage logging, compliance checks, declarations, and reflections.
+AI Guidebook V2 is a Next.js app for student AI usage logging, compliance checks, declarations, and reflections.
 
 This setup is for first-time users.
 
@@ -31,11 +31,11 @@ npm install
 
 ```bash
 docker run -d \
-  --name guidebook-postgres \
+  --name guidebook-postgres-v2 \
   -e POSTGRES_USER=guidebook_user \
   -e POSTGRES_PASSWORD=guidebook_dev \
-  -e POSTGRES_DB=guidebook_db \
-  -p 5433:5432 \
+  -e POSTGRES_DB=guidebook_v2_db \
+  -p 5434:5432 \
   postgres:16
 ```
 
@@ -45,15 +45,15 @@ Use your own DB and set `DATABASE_URL` in `.env`.
 
 ## 3. Configure Environment Variables
 
-Create `ai-guidebook/.env` with:
+Create `ai-guidebook-v2/.env` with:
 
 ```env
-DATABASE_URL="postgresql://guidebook_user:guidebook_dev@localhost:5433/guidebook_db?schema=public"
+DATABASE_URL="postgresql://guidebook_user:guidebook_dev@localhost:5434/guidebook_v2_db?schema=public"
 NEXTAUTH_SECRET="replace-with-random-secret"
 AUTH_SECRET="replace-with-random-secret"
 ENCRYPTION_KEY="replace-with-64-hex-characters"
 INTERNAL_CLASSIFY_TOKEN="replace-with-random-secret"
-NEXTAUTH_URL="http://localhost:3000"
+NEXTAUTH_URL="http://localhost:3002"
 ```
 
 Generate secrets:
@@ -93,7 +93,7 @@ npm run dev
 
 Open:
 
-- `http://localhost:3000/login`
+- `http://localhost:3002/login`
 
 ## 7. Login
 
