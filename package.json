@@ -19,6 +19,7 @@
     "test:integration:notifications": "tsx --test tests/integration/notifications.integration.test.ts",
     "test:integration:staff-view": "tsx --test tests/integration/staff-view.integration.test.ts",
     "test:unit:compliance": "tsx --test tests/unit/compliance-engine.unit.test.ts",
+    "test": "jest",
     "test:e2e": "playwright test",
     "test:e2e:headed": "playwright test --headed"
   },
@@ -46,14 +47,17 @@
     "zustand": "^5.0.11"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
     "@playwright/test": "^1.56.1",
+    "@tailwindcss/postcss": "^4",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "jest": "^30.3.0",
     "tailwindcss": "^4",
+    "ts-jest": "^29.4.6",
     "tsx": "^4.20.6",
     "typescript": "^5"
   },
